@@ -1,5 +1,8 @@
 package com.algaworks.model;
 
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.NumberFormat;
+
 import java.math.BigDecimal;
 import java.util.Date;
 
@@ -20,10 +23,12 @@ public class Titulo {
 	private Long codigo;
 	
 	private String descricao;
-	
+
+	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	@Temporal(TemporalType.DATE)
 	private Date dataVencimento;
-	
+
+	@NumberFormat(pattern = "#,##0.00")
 	private BigDecimal valor;
 	
 	@Enumerated(EnumType.STRING)
