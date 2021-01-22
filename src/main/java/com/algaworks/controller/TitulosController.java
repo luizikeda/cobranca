@@ -13,7 +13,7 @@ public class TitulosController {
     @RequestMapping(value = "/novo", method = RequestMethod.GET)
     public String novo() {
     	System.out.println("teste");
-        return "CadastroTiulo";
+        return "CadastroTitulo";
     }
     
     @RequestMapping(method = RequestMethod.POST)
